@@ -1,0 +1,482 @@
+/*----------------------------------------------------------------------------------*/
+/*--------------------ГЛОбАЛЬНЫЕ-СТИЛИ----------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+@font-face {
+	font-family: 'PTSansNarrow';
+	src:url('../fonts/ptn57f.eot');
+	src:url('../fonts/ptn57f.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/ptn57f.woff') format('woff'),
+		url('../fonts/ptn57f.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'PTSansNarrow';
+	src:url('../fonts/ptn77f.eot');
+	src:url('../fonts/ptn77f.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/ptn77f.woff') format('woff'),
+		url('../fonts/ptn77f.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+}
+.cf:after,.cf:before{content: "";display: table;}
+.cf:after{clear:both;}
+ul{margin: 0;padding: 0;}
+a{text-decoration: none;}
+h2{font:700 30px/42px 'PTSansNarrow', 'Arial', sans-serif;}
+body{background: #000;}
+.body-wrapper{
+	background: url(../images/bg/bg_opacity0.8.png),url(../images/bg/bg_main.jpg) top center no-repeat;
+	background-size: cover;
+	box-sizing:border-box;
+	font: 700 14px/24px 'PTSansNarrow', 'Arial', sans-serif;
+	text-transform: uppercase;
+}
+.body-main{
+	position: relative;
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top,  rgba(0,0,0,0) 40%, rgba(0,0,0,1) 60%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(40%,rgba(0,0,0,0)), color-stop(60%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 40%,rgba(0,0,0,1) 60%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(0,0,0,0) 40%,rgba(0,0,0,1) 60%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(0,0,0,0) 40%,rgba(0,0,0,1) 60%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(0,0,0,0) 40%,rgba(0,0,0,1) 60%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 ); /* IE6-8 */
+}
+.content{
+	margin: 0 auto;
+	width: 960px;
+}
+/*----------------------------------------------------------------------------------*/
+/*--------------------ГЛОбАЛЬНЫЕ-СТИЛИ----------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+/*--------------------ШАПКА---------------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.header{
+	background: red;
+	color : #fff;
+	font: 700 16px/70px 'PTSansNarrow', 'Arial', sans-serif;
+	min-height: 70px;
+	width: 100%;
+}
+.nav{
+	margin: 0 auto;
+	width: 960px;
+}
+.nav__list{
+	float: left;
+	margin-left: 10px;
+}
+.nav__item{
+	float: left;
+	padding: 0 20px;
+}
+.nav__item a{
+	color: #fff;
+	display: inline-block;
+	vertical-align: middle;
+}
+.nav__item:hover{background:green;}
+.nav-checked{
+	border-bottom: 4px solid #fff;
+}
+/*-----Кнопка открываящая окно---------*/
+.login_popup_btn {
+	color: #fff;
+	cursor:pointer;
+	display:inline-block;
+	vertical-align: middle;
+	float: right;
+	padding: 0 10px;
+}/* кнопка входа */
+.login_popup_btn:hover{background: #232323;}
+.log_ico{
+	background: url(../images/sprites.png) no-repeat;
+	background-position: -45px 0;
+	display: inline-block;
+	height: 16px;
+	width: 18px;
+	vertical-align: text-top;
+}
+.logo-main{text-align:center;}/*выравниваем логотип по центру*/
+.logo-main img{margin-top: 60px;}/*картинка логотипа*/
+/*----------------------------------------------------------------------------------*/
+/*--------------------ШАПКА---------------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------------*/
+/*--------------------БЛОК-ПРЕИМУЩЕСТВ----------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.features-main{
+	color : #fff;
+	margin:0 10px 60px 10px;
+}/*обертка*/
+.feature{
+	float: left;
+	padding: 0 10px;
+	text-align: center;
+	width: 31%;
+}/*каждый блок*/
+.rhomb{
+	background: #FFF;
+	display: inline-block;
+	vertical-align: middle;
+	height: 21px;
+	margin: 10px 0 20px 0;
+	transform: rotate(45deg);
+	width: 21px;
+}/* рисуем ромб в преимуществах */
+/*----------------------------------------------------------------------------------*/
+/*--------------------БЛОК-ПРЕИМУЩЕСТВ----------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+/*-------------------БЛОК-НОВОСТЕЙ-И-ФОТО-------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.news-photo{
+	background: url(../images/bg/bg-white.png);
+	margin:0 10px;
+	padding: 30px 0 55px 0;
+}/*обертка*/
+.news-photo p{margin-bottom: 0;}
+.news, .photo{
+	box-sizing:border-box;
+	float: left;
+	padding: 0 80px;
+	width: 50%;
+}
+.news{background: url(../images/sep.png) center right no-repeat;}
+.news span{font: 400 14px/24px 'PTSansNarrow', 'Arial', sans-serif;}
+/*---------------*/
+/*------------СЛАДЙЕР-------------------*/
+/*---------------*/
+.slider-wrapper{
+	border: 7px solid #fff;
+	width: 286px;
+}
+.slider-box{overflow:hidden;}
+.slider{
+	position:relative;
+	width:10000px;
+}
+.slider img{
+	background: #e5e5e5;
+	float:left;
+}
+.slider-nav{width: 100%;}
+.slider-prev,.slider-next{cursor:pointer;}
+/*----------------------------------------------------------------------------------*/
+/*-------------------БЛОК-НОВОСТЕЙ-И-ФОТО-------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+/*------------КНОПКИ-------------------*/
+.nav-btn{
+	background: #000;
+	color: #fff;
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 43px;
+	margin-top: 30px;
+	text-align: center;
+	width: 140px;
+}
+.nav-btn:hover{background: #663d15;}
+.nav-btn:first-child{margin-right: 20px;}
+/*----------------------------------------------------------------------------------*/
+/*-------------------БЛОК-КОНТАКТОВ-И-ЗАПИСИ----------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.contact-purchase{
+	background: url(../images/bg/bg-white.png);
+	margin:35px 10px 65px 10px;
+	padding: 30px 0 55px 0;
+}
+.contact,.purchase{
+	box-sizing:border-box;
+	float: left;
+	width: 50%;
+}
+.contact{
+	background: url(../images/sep.png) center right no-repeat;
+	padding: 0 50px 0 80px;
+}
+.purchase{padding: 0 80px;}
+.purchase-form input[type='text']{
+	border: 2px solid #000;
+	box-sizing:border-box;
+	font: 700 14px/39px 'PTSansNarrow', 'Arial', sans-serif;
+	margin: 10px 0;
+	padding: 0 15px;
+	text-transform: uppercase;
+	width: 140px;
+}
+.purchase-form input[type='text']:nth-child(2n){margin-left: 10px;}
+.purchase-form input[type='text']:nth-child(2n+1){margin-right: 10px;}
+.purchase-form input[type='text']:focus{
+	border-color: #663d15;
+	outline: none;
+}
+.purch-sub{
+	background: #000;
+	border: none;
+	color: #fff;
+	font: 700 14px/41px 'PTSansNarrow', 'Arial', sans-serif;
+	text-transform: uppercase;
+	margin-top: 14px;
+	width: 300px;
+}
+.purch-sub:hover{background: #663d15;}
+/*----------------------------------------------------------------------------------*/
+/*-------------------БЛОК-КОНТАКТОВ-И-ЗАПИСИ----------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+/*-------------------ФУТЕР----------------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.footer-wrapper{
+	background:#242424 url(../images/bg/bg-footer.png);
+	height: 190px;
+	width: 100%;
+}/*обертка футера*/
+.footer{
+	color: #fff;
+	margin: 0 auto;
+	width: 960px;
+}/*основной блок футера*/
+/*------------АДРЕС-------------------*/
+.footer-adr{
+	float: left;
+	margin: 50px 10px;
+	width: 35%;
+}
+.footer-adr a{
+	color: #fff;
+	text-decoration: underline;
+}
+/*------------СОЦИАЛЬНЫЙ БЛОК-------------------*/
+.footer-soc{
+	float: left;
+	margin: 45px 80px;
+	text-align: center;
+}
+.footer-soc a{display: inline-block; margin-right: 6px;vertical-align: middle;}
+.soc-ico-vk,.soc-ico-f,.soc-ico-inst{background: url(../images/sprites.png) no-repeat;}
+.soc-ico-vk{background-position: -176px -60px ;width: 43px;height: 43px;}
+.soc-ico-vk:hover{background-position: -220px -60px ;width: 43px;height: 43px;}
+.soc-ico-f{background-position: 0 -60px ;width: 43px;height: 43px;}
+.soc-ico-f:hover{background-position: -44px -60px ;width: 43px;height: 43px;}
+.soc-ico-inst{background-position: -88px -60px ;width: 43px;height: 43px;}
+.soc-ico-inst:hover{background-position: -132px -60px ;width: 43px;height: 43px;}
+/*------------КОПИРАЙТ-------------------*/
+.footer-copy{
+	float: right;
+	margin: 50px 10px;
+	text-align: center;
+}
+.footer-copy a{margin: 0}
+/*----------------------------------------------------------------------------------*/
+/*-------------------ФУТЕР----------------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------------*/
+/*-------------------ВСПЛЫВАЮЩЕЕ ОКНО ВХОДА-----------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.login_popup{
+	background:#fff;
+	box-sizing:border-box;
+	display:none;
+	height: 430px;
+	left:-225px;
+	margin-left:50%;
+	padding: 35px 80px 60px;
+	position:fixed;
+	top:10%;
+	width:460px;
+	z-index:9999;
+	-webkit-box-shadow: 0 30px 50px rgba(0, 1, 1, 0.75);
+	-moz-box-shadow: 0 30px 50px rgba(0, 1, 1, 0.75);
+	box-shadow: 0 30px 50px rgba(0, 1, 1, 0.75);
+}/*-----Внешний вид самого окна---------*/
+.login_popup_close {
+	background: url(../images/sprites.png) no-repeat;
+	background-position: 0 0;
+	cursor:pointer;
+	height: 23px;
+	position: absolute;
+	right: -33px;
+	top: 10px;
+	width: 23px;
+}/*-----Кнопка закрытия окна---------*/
+.login_popup_overlay {
+	background-color:#000;
+	bottom:0;
+	display: none;
+	height:100%;
+	left:0;
+	opacity:0.9;
+	position:fixed;
+	right:0;
+	top:0;
+	width:100%;
+	z-index:9998;
+}/*-----Заливка фона вокруг окна---------*/
+/*--------------*/
+/*Поля ввода логина и пароля*/
+/*--------------*/
+#login-form-n,
+#login-form-p{
+	border: 2px solid #000;
+	box-sizing:border-box;
+	font: 700 14px/39px 'PTSansNarrow', 'Arial', sans-serif;
+	margin-bottom: 15px;
+	padding: 0 30px 0 15px;
+	text-transform: uppercase;
+	width: 300px;
+}
+#login-form-n:focus,
+#login-form-p:focus{
+	border-color: #663d15;
+	outline: none;
+}
+#login-form-n{
+	background: url(../images/login-sprite.png) 97% -100% no-repeat;
+}
+#login-form-p{
+	background: url(../images/login-sprite.png) 97% 200% no-repeat;
+}
+.login-enter{
+	background: #000;
+	border: none;
+	color: #fff;
+	margin-top: 14px;
+	width: 300px;
+	text-transform: uppercase;
+	font: 700 14px/41px 'PTSansNarrow', 'Arial', sans-serif;
+}/*кнопка входа*/
+.login-enter:hover{background: #663d15;}/*Наведение на кнопку входа*/
+.login-form-forgot{
+	color: #000;
+	float: right;
+	text-decoration: underline;
+}/*Ссылка - забыл пароль*/
+/*---------Внешний вид чекбоксов-------------*/
+input[type="checkbox"]{display:none;}
+input[type="checkbox"] + label{cursor: pointer;}
+input[type="checkbox"] + label::before{
+	background: url(../images/sprites.png) no-repeat;
+	content: "";
+	display: inline-block;
+	vertical-align: top;
+	height: 20px;/*Ширина и высота иконки чекбокса*/
+	margin: 0 10px -4px 0; /*Позиционируем чекбокс относительно лейбла*/
+	width: 20px;/*Ширина и высота иконки чекбокса*/
+}
+input[type="checkbox"] + label::before {background-position: -85px 0;} /*Активный, не чекнутый*/
+input[type="checkbox"]:checked + label::before {background-position: -110px 0}/*Активный, чекнутый*/
+input[type="checkbox"]:disabled + label::before {background-position: -135px 0;}/* Неактивный, не чекнутый*/
+input[type="checkbox"]:checked:disabled + label::before {background-position: -160px 0}/*Неактивный, чекнутый*/
+/*---------Внешний вид чекбоксов-------------*/
+/*---------Внешний вид радиобаттонов-------------*/
+input[type="radio"] {display:none;}
+input[type="radio"] + label {cursor: pointer;}
+input[type="radio"] + label::before {
+	background: url(../images/sprites.png) no-repeat;
+	content: "";
+	display: inline-block;
+	vertical-align: top;
+	height: 20px;/*Ширина и высота иконки радио*/
+	margin: 0 10px -4px 0; /*Позиционируем радио относительно лейбла*/
+	width: 20px;/*Ширина и высота иконки радио*/
+}
+input[type="radio"] + label::before {background-position: -185px 0;}/*Активный, не чекнутый*/
+input[type="radio"]:checked + label::before {background-position: -210px 0;}/*Активный, чекнутый*/
+input[type="radio"]:disabled + label::before {background-position: -235px 0;}/* Неактивный, не чекнутый*/
+input[type="radio"]:checked:disabled + label::before {background-position: -260px 0;}/*Неактивный, чекнутый*/
+/*---------Внешний вид радиобаттонов-------------*/
+/*----------------------------------------------------------------------------------*/
+/*-------------------ВСПЛЫВАЮЩЕЕ ОКНО ВХОДА-----------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+/*-------------------ВСПЛЫВАЮЩЕЕ ОКНО КАРТЫ-----------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.map_popup {
+	border: 7px solid #fff;
+	box-sizing:border-box;
+	display:none;
+	height:573px;
+	left:-383px;
+	margin-left:50%;
+	position:fixed;
+	top:10%;
+	width:779px;
+	z-index:9999;
+	-webkit-box-shadow: 0 30px 50px rgba(0, 1, 1, 0.75);
+	-moz-box-shadow: 0 30px 50px rgba(0, 1, 1, 0.75);
+	box-shadow: 0 30px 50px rgba(0, 1, 1, 0.75);
+}/*-----Внешний вид самого окна---------*/
+.map_popup_close {
+	background-position: 0 0;
+	background: url(../images/sprites.png) no-repeat;
+	cursor:pointer;
+	height: 23px;
+	position: absolute;
+	right: -40px;
+	top: 10px;
+	width: 23px;
+}/*-----Кнопка закрытия окна---------*/
+.map_popup_overlay {
+	background-color:#000;
+	bottom:0;
+	display: none;
+	height:100%;
+	left:0;
+	opacity:0.9;
+	position:fixed;
+	right:0;
+	top:0;
+	width:100%;
+	z-index:9998;
+}/*-----Заливка фона вокруг окна---------*/
+/*----------------------------------------------------------------------------------*/
+/*-------------------ВСПЛЫВАЮЩЕЕ ОКНО КАРТЫ-----------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+/*---------------------------------ПРАЙС--------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.price-wrapper{
+	height: auto;
+	min-height: 100%;;
+	background: url(../images/bg/bg-white.png);
+	position: relative;
+}
+.price-main{
+	width: 960px;
+	margin: 0 auto;
+	padding: 30px 10px;
+}
+.breadcrumbs{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.breadcrumbs li{
+	float: left;
+	position: relative;
+}
+.breadcrumbs span{color: #aba9a7}
+.breadcrumbs a{
+	color: #000;
+	display: inline-block;
+	margin-right: 40px;
+}
+.breadcrumbs a::after{
+	content: "";
+	position: absolute;
+	top: 50%;
+	right: 15px;
+	margin-top: -6px;
+	background: url(../images/ul-liist-img.png);
+	width: 10px;
+	height: 10px;
+}
+/*---------------------------------------------------------------------------------*/
+/*---------------------------------ПРАЙС--------------------------------------------*/
+/*----------------------------------------------------------------------------------*/

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Барбершоп «Бородинский»</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script type="text/javascript" src="js/slider.js"></script>
+</head>
+<body>
+	<!-- BEGIN body-wrapper  -->
+	<div class="body-wrapper"><div class="body-main">
+		<header class="header">
+				<nav class="nav cf">
+					<ul class="nav__list">
+						<li class="nav__item"><a href="index.html">главная</a></li>
+						<li class="nav__item"><a href="#">информация</a></li>
+						<li class="nav__item"><a href="#">новости</a></li>
+						<li class="nav__item"><a class="nav-checked" href="price.html">прайс-лист</a></li>
+						<li class="nav__item"><a href="#">магазин</a></li>
+						<li class="nav__item"><a href="#">контакты</a></li>
+					</ul>
+				<div iddiv="login" class="login_popup_btn"><span class="log_ico"></span>&nbsp;&nbsp;&nbsp;<span>вход</span></div>
+				</nav>
+		</header>
+		<!-- BEGIN price-wrapper  -->
+		<div class="price-wrapper cf">
+			<div class="price-main">
+				<h2>прайс-лист</h2>
+				<ul class="breadcrumbs">
+					<li><a href="index.html">главная</a></li>
+					<li><span>прайс-лист</span></li>
+				</ul><!-- breadcrumbs -->
+			</div><!-- price-main -->
+		</div><!-- END price-wrapper -->
+		<footer class="footer-wrapper">
+			<div class="footer cf">
+				<p class="footer-adr">
+					барбершоп «бородинский»<br>адрес: г. санкт-петербург, ул. б. конюшенная, д. 19/8<br><a iddiv="map" class="map_popup_btn" href="#">как нас найти?</a><br>телефон: +7 (495) 666-02-66
+				</p>
+				<div class="footer-soc">
+					<p>давайте дружить!</p>
+					<a class="soc-ico-vk" href="#"></a>
+					<a class="soc-ico-f" href="#"></a>
+					<a class="soc-ico-inst" href="#"></a>
+				</div>
+				<div class="footer-copy"><p>разработано:</p><a class="nav-btn" href="">htmlacademy.ru</a></div>
+			</div>
+		</footer>
+	</div><!-- END body-wrapper -->
+	<!-- BEGIN login-popup  -->
+	<div class="login_popup_overlay" opendiv=""></div>
+	<!-- Всплывающее окно -->
+	<div id="login" class="login_popup">
+		<div class="login_popup_close"></div>
+		<h2>личный кабинет</h2>
+		<p>введите пожалуйста свой логин и пароль<br> если вы забыли пароль</p>
+		<form class="login-form" action="" method="get">
+			<input id="login-form-n" type="text" name="login_id" value="логин" onfocus="this.value=''" onblur="if(this.value=='')this.value='логин'" />
+			<input  id="login-form-p" type="text" name="pass-id" value="пароль" onfocus="this.value=''" onblur="if(this.value=='')this.value='пароль'" />
+			<input id="login-checkbox" type="checkbox" name="check" checked hidden><label for="login-checkbox">запомните меня</label>
+			<a class="login-form-forgot" href="#">я забыл пароль!</a>
+			<input class="login-enter" type="submit" value="войти">
+		</form>
+	</div><!-- Всплывающее окно -->
+	<!-- END login-popup  -->
+	<!-- BEGIN map-popup  -->
+		<div class="map_popup_overlay" opendiv=""></div>
+		<!-- Всплывающее окно -->
+		<div id="map" class="map_popup">
+			<div class="map_popup_close"></div>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d999.293144170709!2d30.32237231150054!3d59.939006829189154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2sua!4v1432585154735" width="766" height="560" frameborder="0" style="border:0"></iframe>
+		</div>
+	<!-- END map-popup  -->
+</div><!-- END body-main -->
+</body>
+<script src="js/jquery-1.11.1.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+$(".login_popup_btn").click(function()
+{
+				$('.login_popup_overlay').fadeIn(300);
+				var iddiv = $(this).attr("iddiv");
+				$('#'+iddiv).fadeIn(300);
+				$('.login_popup_overlay').attr('opendiv',iddiv);
+				return false;
+});
+$('.login_popup_overlay, .login_popup_close').click(function()
+{
+				var iddiv = $(".login_popup_overlay").attr('opendiv');
+				$('.login_popup_overlay').fadeOut(300);
+				$('#'+iddiv).fadeOut(300);
+});
+});
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+$(".map_popup_btn").click(function()
+{
+				$('.map_popup_overlay').fadeIn(300);
+				var iddiv = $(this).attr("iddiv");
+				$('#'+iddiv).fadeIn(300);
+				$('.map_popup_overlay').attr('opendiv',iddiv);
+				return false;
+});
+$('.map_popup_overlay, .map_popup_close').click(function()
+{
+				var iddiv = $(".map_popup_overlay").attr('opendiv');
+				$('.map_popup_overlay').fadeOut(300);
+				$('#'+iddiv).fadeOut(300);
+});
+});
+</script>
+</html>
