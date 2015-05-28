@@ -55,10 +55,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 /*--------------------ШАПКА---------------------------------------------------------*/
 /*----------------------------------------------------------------------------------*/
 .header{
-	background: red;
+	background: #000;
 	color : #fff;
-	font: 700 16px/70px 'PTSansNarrow', 'Arial', sans-serif;
-	min-height: 70px;
+	font: 700 16px/66px 'PTSansNarrow', 'Arial', sans-serif;
 	width: 100%;
 }
 .nav{
@@ -77,11 +76,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 	color: #fff;
 	display: inline-block;
 	vertical-align: middle;
+	border-bottom: 4px solid transparent;
 }
-.nav__item:hover{background:green;}
-.nav-checked{
-	border-bottom: 4px solid #fff;
-}
+.nav__item .nav-checked{border-bottom-color: #fff;}
+.nav__item:hover{background:#232323;}
 /*-----Кнопка открываящая окно---------*/
 .login_popup_btn {
 	color: #fff;
