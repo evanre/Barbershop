@@ -3,19 +3,13 @@
 /*----------------------------------------------------------------------------------*/
 @font-face {
 	font-family: 'PTSansNarrow';
-	src:url('../fonts/ptn57f.eot');
-	src:url('../fonts/ptn57f.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/ptn57f.woff') format('woff'),
-		url('../fonts/ptn57f.ttf') format('truetype');
+	src:url('ptn57f.woff') format('woff');
 	font-weight: 400;
 	font-style: normal;
 }
 @font-face {
 	font-family: 'PTSansNarrow';
-	src:url('../fonts/ptn77f.eot');
-	src:url('../fonts/ptn77f.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/ptn77f.woff') format('woff'),
-		url('../fonts/ptn77f.ttf') format('truetype');
+	src:url('ptn77f.woff') format('woff');
 	font-weight: 700;
 	font-style: normal;
 }
