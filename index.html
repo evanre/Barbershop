@@ -21,7 +21,7 @@
 						<li class="nav__item"><a href="#">магазин</a></li>
 						<li class="nav__item"><a href="#">контакты</a></li>
 					</ul>
-				<div iddiv="login" class="login_popup_btn"><span class="log_ico"></span>&nbsp;&nbsp;&nbsp;<span>вход</span></div>
+				<div iddiv="login" class="login_popup_btn"><span>вход</span></div>
 				</nav>
 		</header>
 		<!-- BEGIN content  -->
@@ -113,8 +113,8 @@
 		<h2>личный кабинет</h2>
 		<p>введите пожалуйста свой логин и пароль<br> если вы забыли пароль</p>
 		<form class="login-form" action="" method="get">
-			<input id="login-form-n" type="text" name="login_id" value="логин" onfocus="this.value=''" onblur="if(this.value=='')this.value='логин'" />
-			<input  id="login-form-p" type="text" name="pass-id" value="пароль" onfocus="this.value=''" onblur="if(this.value=='')this.value='пароль'" />
+			<span><input type="text" name="login_id" value="логин" onfocus="this.value=''" onblur="if(this.value=='')this.value='логин'"></span>
+			<span><input type="text" name="pass-id" value="пароль" onfocus="this.value=''" onblur="if(this.value=='')this.value='пароль'"></span>
 			<input id="login-checkbox" type="checkbox" name="check" checked hidden><label for="login-checkbox">запомните меня</label>
 			<a class="login-form-forgot" href="#">я забыл пароль!</a>
 			<input class="login-enter" type="submit" value="войти">
