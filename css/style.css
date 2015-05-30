@@ -13,12 +13,6 @@
 	font-weight: 700;
 	font-style: normal;
 }
-@font-face {
-	font-family: 'icomoon';
-	src:url('icomoon.woff') format('woff');
-	font-weight: 400;
-	font-style: normal;
-}
 .cf:after,.cf:before{content: "";display: table;}
 .cf:after{clear:both;}
 ul{margin: 0;padding: 0;}
@@ -26,7 +20,7 @@ a{text-decoration: none;}
 h2{font:700 30px/42px 'PTSansNarrow', 'Arial', sans-serif;}
 body{background: #000;}
 .body-wrapper{
-	background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlPM0jRW/QAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII='),url(../images/bg/bg_main.jpg) top center no-repeat;
+	background: url(../images/bg/bg_opacity0.8.png),url(../images/bg/bg_main.jpg) top center no-repeat;
 	background-size: cover;
 	box-sizing:border-box;
 	font: 700 14px/24px 'PTSansNarrow', 'Arial', sans-serif;
@@ -79,17 +73,25 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 	border-bottom: 4px solid transparent;
 }
 .nav__item .nav-checked{border-bottom-color: #fff;}
-.nav__item:hover,.login_popup_btn:hover{background:#232323;}
+.nav__item:hover{background:#232323;}
 /*-----Кнопка открываящая окно---------*/
-.login_popup_btn:before{
-	font-family: 'icomoon';
-	content: "\e601   ";
-}
-.login_popup_btn{
+.login_popup_btn {
+	color: #fff;
 	cursor:pointer;
+	display:inline-block;
+	vertical-align: middle;
 	float: right;
 	padding: 0 10px;
 }/* кнопка входа */
+.login_popup_btn:hover{background: #232323;}
+.log_ico{
+	background: url(../images/sprites.png) no-repeat;
+	background-position: -45px 0;
+	display: inline-block;
+	height: 16px;
+	width: 18px;
+	vertical-align: text-top;
+}
 .logo-main{text-align:center;}/*выравниваем логотип по центру*/
 .logo-main img{margin-top: 60px;}/*картинка логотипа*/
 /*----------------------------------------------------------------------------------*/
@@ -247,31 +249,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 	margin: 45px 80px;
 	text-align: center;
 }
-.footer-soc a{
-	display: inline-block;
-	margin-right: 6px;
-	width: 43px;
-	height: 43px;
-	color: #fff;
-	background-color: #000;
-	vertical-align: middle;
-}
-.footer-soc a:hover{
-	background-color: #fff;
-	color: #000;
-}
-.soc-ico-vk:before {
-    content: "\f189";
-    font:normal 25px/43px 'icomoon';
-}
-.soc-ico-f:before {
-    content: "\f09a";
-    font:normal 25px/43px 'icomoon';
-}
-.soc-ico-inst:before {
-    content: "\f16d";
-    font:normal 25px/43px 'icomoon';
-}
+.footer-soc a{display: inline-block; margin-right: 6px;vertical-align: middle;}
+.soc-ico-vk,.soc-ico-f,.soc-ico-inst{background: url(../images/sprites.png) no-repeat;}
+.soc-ico-vk{background-position: -176px -60px ;width: 43px;height: 43px;}
+.soc-ico-vk:hover{background-position: -220px -60px ;width: 43px;height: 43px;}
+.soc-ico-f{background-position: 0 -60px ;width: 43px;height: 43px;}
+.soc-ico-f:hover{background-position: -44px -60px ;width: 43px;height: 43px;}
+.soc-ico-inst{background-position: -88px -60px ;width: 43px;height: 43px;}
+.soc-ico-inst:hover{background-position: -132px -60px ;width: 43px;height: 43px;}
 /*------------КОПИРАЙТ-------------------*/
 .footer-copy{
 	float: right;
@@ -328,7 +313,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 /*--------------*/
 /*Поля ввода логина и пароля*/
 /*--------------*/
-.login-form input[type='text']{
+#login-form-n,
+#login-form-p{
 	border: 2px solid #000;
 	box-sizing:border-box;
 	font: 700 14px/39px 'PTSansNarrow', 'Arial', sans-serif;
@@ -337,23 +323,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 	text-transform: uppercase;
 	width: 300px;
 }
-.login-form input[type='text']:focus{border-color: #663d15;outline: none;}
-.login-form>span{
-	position: relative;
+#login-form-n:focus,
+#login-form-p:focus{
+	border-color: #663d15;
+	outline: none;
 }
-.login-form>span:nth-child(1):after{
-	font-family: 'icomoon';
-	content: "\e601";
-	position: absolute;
-	top: -25%;
-	right: 5%;
+#login-form-n{
+	background: url(../images/login-sprite.png) 97% -100% no-repeat;
 }
-.login-form>span:nth-child(2):after{
-	font-family: 'icomoon';
-	content: "\f023";
-	position: absolute;
-	top: -25%;
-	right: 5%;
+#login-form-p{
+	background: url(../images/login-sprite.png) 97% 200% no-repeat;
 }
 .login-enter{
 	background: #000;
@@ -373,18 +352,36 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 /*---------Внешний вид чекбоксов-------------*/
 input[type="checkbox"]{display:none;}
 input[type="checkbox"] + label{cursor: pointer;}
-input[type="checkbox"] + label::before{font-family: 'icomoon';content: "\e606   ";} /*Активный, не чекнутый*/
-input[type="checkbox"]:checked + label::before{content: "\e60b   ";}/*Активный, чекнутый*/
-input[type="checkbox"]:disabled + label::before {content: "\e606   ";opacity: .5;}/* Неактивный, не чекнутый*/
-input[type="checkbox"]:checked:disabled + label::before {content: "\e60b   ";opacity: .5;}/*Неактивный, чекнутый*/
+input[type="checkbox"] + label::before{
+	background: url(../images/sprites.png) no-repeat;
+	content: "";
+	display: inline-block;
+	vertical-align: top;
+	height: 20px;/*Ширина и высота иконки чекбокса*/
+	margin: 0 10px -4px 0; /*Позиционируем чекбокс относительно лейбла*/
+	width: 20px;/*Ширина и высота иконки чекбокса*/
+}
+input[type="checkbox"] + label::before {background-position: -85px 0;} /*Активный, не чекнутый*/
+input[type="checkbox"]:checked + label::before {background-position: -110px 0}/*Активный, чекнутый*/
+input[type="checkbox"]:disabled + label::before {background-position: -135px 0;}/* Неактивный, не чекнутый*/
+input[type="checkbox"]:checked:disabled + label::before {background-position: -160px 0}/*Неактивный, чекнутый*/
 /*---------Внешний вид чекбоксов-------------*/
 /*---------Внешний вид радиобаттонов-------------*/
 input[type="radio"] {display:none;}
 input[type="radio"] + label {cursor: pointer;}
-input[type="radio"] + label::before {font-family: 'icomoon';content: "\e604   ";}/*Активный, не чекнутый*/
-input[type="radio"]:checked + label::before {content: "\e605   "}/*Активный, чекнутый*/
-input[type="radio"]:disabled + label::before {content: "\e604   ";opacity: .5;}/* Неактивный, не чекнутый*/
-input[type="radio"]:checked:disabled + label::before {content: "\e605   ";opacity: .5;}/*Неактивный, чекнутый*/
+input[type="radio"] + label::before {
+	background: url(../images/sprites.png) no-repeat;
+	content: "";
+	display: inline-block;
+	vertical-align: top;
+	height: 20px;/*Ширина и высота иконки радио*/
+	margin: 0 10px -4px 0; /*Позиционируем радио относительно лейбла*/
+	width: 20px;/*Ширина и высота иконки радио*/
+}
+input[type="radio"] + label::before {background-position: -185px 0;}/*Активный, не чекнутый*/
+input[type="radio"]:checked + label::before {background-position: -210px 0;}/*Активный, чекнутый*/
+input[type="radio"]:disabled + label::before {background-position: -235px 0;}/* Неактивный, не чекнутый*/
+input[type="radio"]:checked:disabled + label::before {background-position: -260px 0;}/*Неактивный, чекнутый*/
 /*---------Внешний вид радиобаттонов-------------*/
 /*----------------------------------------------------------------------------------*/
 /*-------------------ВСПЛЫВАЮЩЕЕ ОКНО ВХОДА-----------------------------------------*/
